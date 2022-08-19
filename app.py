@@ -3,6 +3,9 @@ import os
 import sys
 from transformers import AutoModel
 from models.caption_models import CaptioningLSTM
+from PIL import Image
+from experiments import text_to_seq, seq_to_text, split_caption
+from imaging import memeify_image
 
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
