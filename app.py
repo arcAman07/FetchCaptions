@@ -32,4 +32,4 @@ FILE_TO_CLASS = {
 ckpt_path = 'LSTMDecoderWords.best.pth'
 model_class = FILE_TO_CLASS[ckpt_path]
 
-w_lstm_model = load_and_build_model(gdrive_id, ckpt_path, model_class)
+w_lstm_model = load_and_build_model(ckpt_path, model_class)
