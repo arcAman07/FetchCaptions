@@ -10,7 +10,7 @@ def count_parameters(model):
 def load_and_build_model(ckpt_path, model_class):
 
     print(f'Building {model_class.__name__} model')
-    model = model_class.from_pretrained(ckpt_path).to(DEVICE)
+    model = model_class.from_pretrained(ckpt_path)
     print(f'Built and loaded {model_class.__name__} model from {ckpt_path}')
     print('# parameters:', count_parameters(model))
 
